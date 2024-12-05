@@ -1,11 +1,11 @@
 name: workflow events
 on:
-  schedule:
-    - cron: '1 18 5 12 4'
+#   schedule:
+# - cron: '1 18 5 12 4'
 #   push:
 #     branches:
 #       - master
-#   workflow_dispatch:
+  workflow_dispatch:
 #   pull_request:
 #     types:
 #       - opened
