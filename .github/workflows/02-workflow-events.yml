@@ -8,4 +8,4 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name: print trigger name
-          run:  echo "job trigger name- ${{toJson(github.event_name)}}"
+          run:  echo "event name for this job :- ${{toJson(github.event_name)}}"
