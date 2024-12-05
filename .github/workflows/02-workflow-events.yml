@@ -7,5 +7,5 @@ jobs:
     echo:
       runs-on: ubuntu-latest
       steps:
-        - name: print trigger name
+        - name: print event name
           run:  echo "event name for this job :- ${{toJson(github.event_name)}}"
