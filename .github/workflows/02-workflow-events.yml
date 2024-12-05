@@ -1,8 +1,12 @@
 name: workflow events
 on:
   push:
+    branches:
+      - master
   workflow_dispatch:
   pull_request:
+    types:
+      - opened
 jobs:
     echo:
       runs-on: ubuntu-latest
