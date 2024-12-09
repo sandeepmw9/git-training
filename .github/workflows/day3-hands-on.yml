@@ -1,0 +1,21 @@
+name: day3-hands-on
+on:
+  push:
+    branches:
+      - master
+      - feture1
+      - feature2
+  issues:
+    types:
+      - open
+      - closed
+  pull_request:
+    types:
+      - opened
+jobs:
+  name: test workflow triggers
+  runs-on: ubuntu-latest
+  steps:
+    - name: print trigger name
+      run: |
+        echo "workflow triggered by ${{toJSON()}}"
