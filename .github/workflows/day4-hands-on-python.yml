@@ -15,15 +15,18 @@ jobs:
         
       - name: install dependencies
         run: |
-          python -m pip install --upgrade pip setuptools wheel
-          pip freeze > requirements.txt
+          python -m pip install --upgrade pip
           pip install -r requirements.txt
 
       - name: Build App
         run: |
-          pip install bmi
+          mkdir -p build
+          cp -r myapp-py build/
+          cp requirements.txt build/
+          tar -cvzf myapp-py.tar.gz -C build .
+          
       - name: Upload distributions
         uses: actions/upload-artifact@v4
         with:
-          name: bmi*
-          path: bmi*
+          name: myapp-py
+          path: myapp-py.tar.gz
