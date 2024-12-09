@@ -19,9 +19,9 @@ jobs:
           pip freeze > requirements.txt
           pip install -r requirements.txt
 
-      - name: Build
+      - name: Build App
         run: |
-          python -m build
+          pip install bmi
       - name: Upload distributions
         uses: actions/upload-artifact@v4
         with:
