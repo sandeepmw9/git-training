@@ -1,17 +1,18 @@
 name: day3-hands-on
 on:
-  push:
-    branches:
-      - master
-      - feature1
-      - feature2
-  issues:
-    types:
-      - opened
-      - closed
-  pull_request:
-    types:
-      - opened
+  workflow_dispatch:
+  # push:
+  #   branches:
+  #     - master
+  #     - feature1
+  #     - feature2
+  # issues:
+  #   types:
+  #     - opened
+  #     - closed
+  # pull_request:
+  #   types:
+  #     - opened
 jobs:
   test_workflow_triggers:
     runs-on: ubuntu-latest
