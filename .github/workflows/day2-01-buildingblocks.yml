@@ -1,6 +1,6 @@
 name: building blocks
 on: 
-  workflow_dispatch
+  workflow_dispatch:
 jobs:
   say_hello:
     runs-on: ubuntu-latest
