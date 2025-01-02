@@ -11,5 +11,5 @@ jobs:
       - name: aws intergation using OIDC
         uses: aws-actions/configure-aws-credentials@v4
           with:
-            role-to-assume: arn:aws:iam::736218978384:role/GA_OIDC
+            role-to-assume: ${{ secrets.OIDC }}
             aws-region: ap-south-1
