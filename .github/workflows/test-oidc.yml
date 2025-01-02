@@ -1,9 +1,6 @@
 name: test-oidc
 on:
   workflow_dispatch:
-permissions:
-  id-token: write
-  contents: read
 jobs:
   check-oidc:
     permissions:
